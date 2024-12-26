@@ -1,9 +1,6 @@
 package com.healthcaremanagementsystem;
 
-import com.healthcaremanagementsystem.service.DepartmentService;
-import com.healthcaremanagementsystem.service.DoctorService;
-import com.healthcaremanagementsystem.service.HospitalService;
-import com.healthcaremanagementsystem.service.PersonService;
+import com.healthcaremanagementsystem.service.*;
 
 import java.util.Scanner;
 
@@ -17,6 +14,9 @@ public class ArrayListHealthcareDemo {
         DoctorService doctorService = new DoctorService();
         HospitalService hospitalService = new HospitalService();
         DepartmentService departmentService = new DepartmentService();
+        AppointmentService appointmentService = new AppointmentService();
+        PrescriptionService prescriptionService = new PrescriptionService();
+        BillingService billingService = new BillingService();
 
         int option=0;
         do {
@@ -57,15 +57,21 @@ public class ArrayListHealthcareDemo {
                     break;
 
                 case 5:
-                    System.out.println("appointment created");
+                    appointmentService.createAppointment();
+                    appointmentService.displayAppointment();
+//                    System.out.println("appointment created");
                     break;
 
                 case 6:
-                    System.out.println("prescription created ");
+                    prescriptionService.createPrescription();
+                    prescriptionService.displayPrescription();
+//                    System.out.println("prescription created ");
                     break;
 
                 case 7:
-                    System.out.println("bill created");
+                    billingService.createBilling();
+                    billingService.displayBilling();
+//                    System.out.println("bill created");
                     break;
 
                 default:

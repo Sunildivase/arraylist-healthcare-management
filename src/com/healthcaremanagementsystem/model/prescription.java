@@ -1,6 +1,6 @@
 package com.healthcaremanagementsystem.model;
 
-public class prescription {
+public class Prescription {
 
     private int prescriptionId;
     private String prescriptionDetails;
