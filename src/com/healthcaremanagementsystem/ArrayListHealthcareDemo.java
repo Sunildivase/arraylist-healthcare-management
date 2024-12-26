@@ -1,5 +1,8 @@
 package com.healthcaremanagementsystem;
 
+import com.healthcaremanagementsystem.service.DepartmentService;
+import com.healthcaremanagementsystem.service.DoctorService;
+import com.healthcaremanagementsystem.service.HospitalService;
 import com.healthcaremanagementsystem.service.PersonService;
 
 import java.util.Scanner;
@@ -11,10 +14,13 @@ public class ArrayListHealthcareDemo {
     public static void main(String[] args) {
 
         PersonService personService = new PersonService();
+        DoctorService doctorService = new DoctorService();
+        HospitalService hospitalService = new HospitalService();
+        DepartmentService departmentService = new DepartmentService();
 
         int option=0;
         do {
-            System.out.println("-----------healtcare-management-system---------------");
+            System.out.println("-----------healthcare-management-system---------------");
             System.out.println("1.create person");
             System.out.println("2.create doctor");
             System.out.println("3.create hospital");
@@ -33,15 +39,21 @@ public class ArrayListHealthcareDemo {
                     break;
 
                 case 2:
-                    System.out.println("doctor created");
+                    doctorService.createDoctor();
+                    doctorService.dispalyDoctor();
+//                    System.out.println("doctor created");
                     break;
 
                 case 3:
-                    System.out.println("hospital created");
+                    hospitalService.createHospital();
+                    hospitalService.displayHospital();
+//                    System.out.println("hospital created");
                     break;
 
                 case 4:
-                    System.out.println("department created ");
+                    departmentService.createDepartment();
+                    departmentService.displayDepartment();
+//                    System.out.println("department created ");
                     break;
 
                 case 5:
