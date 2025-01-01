@@ -1,7 +1,6 @@
 package com.healthcaremanagementsystem.model;
 
 public class Prescription {
-
     private int prescriptionId;
     private String prescriptionDetails;
     private int personId;
@@ -39,3 +38,5 @@ public class Prescription {
         this.personId = personId;
     }
 }
+
+
